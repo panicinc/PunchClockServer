@@ -1,0 +1,47 @@
+<% 
+half = (@people.count.to_f / 2).ceil
+for i in 0..half-1
+%>
+<table>
+	<tr>
+		<td class="name_box">
+			<% inout = @people[i][1] %>
+			<div class="status <%= inout %>">
+				<%= inout %>
+			</div>
+			<div class="name">
+				<%= @people[i][0] %>
+			</div>
+		</td>
+		<% if @people[i+half] %>
+		<td class="name_box right">
+			<% inout = @people[i + half][1] %>
+			<div class="status <%= inout %>">
+				<%= inout %>
+			</div>
+			<div class="name">
+				<%= @people[i+half][0] %>
+			</div>
+		</td>
+		<% else %>
+			<td class="name_box">
+  			<div class="status">&nbsp;</div>
+  			<div class="name">&nbsp;</div>
+  		</td>
+
+		<% end %>
+	</tr>
+</table>
+<% end %>
+<table>
+<tbody>
+<tr>
+<td class="totalLabel">
+Total In:
+</td>
+<td class="totalCount">
+<div class="totalCountContainer"><%= @count %></div>
+</td>
+</tr>
+</tbody>
+</table>

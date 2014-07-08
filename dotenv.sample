@@ -1,0 +1,5 @@
+DATABASE_URL="postgres://james@localhost:5432/punchclock"
+LANG=en_US.UTF-8
+RACK_ENV=development
+ZEROPUSH_DEV_TOKEN=xxx
+ZEROPUSH_PROD_TOKEN=xxx

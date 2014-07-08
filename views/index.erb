@@ -1,0 +1,157 @@
+<html>
+<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta application-name="PunchClock" data-default-size="8,4" data-allows-scrolling="NO" />
+<style type="text/css">
+
+body
+{
+	padding: 0;
+	margin: 0;
+	font-family: 'UniversLTStd-Cn';
+	background: black;
+}
+
+table {
+	color: white;
+/* 	border-collapse: separate; */
+	table-layout:fixed;
+	font-size: 22px;
+	border-spacing: 0px;
+	width: 100%;
+}
+
+/* A single project box */
+tr {
+/* 	height: 27px; */
+}
+
+td {
+	color: rgba(255,255,255,1);
+/* 	padding: 10px 10px 6px 10px; */
+	padding: 2px 5px 2px 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 23px;
+	background: url(../images/border1.png) bottom repeat-x;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-device-pixel-ratio:1.5)
+{ 
+	td
+	{
+		background-size: 100% 64px;
+	}
+}
+
+.name
+{
+	float: left;
+	clear: none;
+/* 	width: 80%; */
+	color: white;
+	margin-top: 5px;
+	margin-left: 12px;
+	text-transform: uppercase;
+}
+.status
+{
+	float: left;
+	clear: none;
+	width: 50px;
+	-webkit-border-radius: 4px;	
+	text-align: center;
+	padding-top: 6px;
+	margin-top: 2px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+.status.In
+{
+	background: #00ba00;
+	color: white;
+}
+.status.old
+{
+	background: #808080;
+	color: white;
+}
+.status.Out
+{
+	background: #ff3000;
+	color: white;
+}
+.status.near
+{
+	background: #fc6b00;
+	color: white;
+	font-size: 18px;
+	padding-top: 4px;
+	line-height: 20px;
+}
+.status.stale
+{
+	background: #333333;
+	color: black;
+	font-size: 18px;
+	padding-top: 4px;
+	line-height: 20px;
+}
+
+.totalLabel, .totalCount
+{
+	background: none;
+	text-transform: uppercase;
+	padding-top: 7px;
+}
+.totalLabel
+{
+
+	color: #646464;	
+}
+
+.totalCount
+{
+	text-align: right;
+}
+
+.totalCountContainer
+{
+/* 	width: 50px; */
+	float: right;
+/* 	text-align: center; */
+}
+
+
+</style>
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+function loadPeople() {
+	$.ajax({
+		url: "/status/table",
+	  context: $('#whoshere')
+	}).done(function(data) {
+	  $(this).html(data);
+	});
+}
+
+$(document).ready(function () {
+	loadPeople();
+	
+	setInterval(function() {
+ 	loadPeople();
+}, 30000);	
+
+});
+
+</script>
+</head>
+<body>
+<div id="whoshere">
+</div>
+
+</body>
+</html>

@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
@@ -39,6 +42,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   json
   pg
   rest-client

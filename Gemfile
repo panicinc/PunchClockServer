@@ -13,3 +13,5 @@ gem 'unicorn'
 gem 'pg'
 
 gem 'zero_push'
+
+gem 'dotenv'

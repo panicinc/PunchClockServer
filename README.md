@@ -13,6 +13,8 @@ The server is designed to run with a [Postgres](https://devcenter.heroku.com/art
 - `$ cp dotenv.sample .env`
 - `$ gem install bundler; bundle install`
 
+To run the server locally run `foreman start`
+
 #### Images
 Put your people images in the public folder and name them the same as the names used in the app.
 

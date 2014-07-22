@@ -9,7 +9,7 @@ migration "create people table" do
     DateTime    :date
     String      :status
     Integer     :version
-    
+
     index :name, :unique => true
   end
 end
@@ -19,7 +19,7 @@ migration "create people_people" do
     primary_key :id
     Integer     :person_id
     Integer     :watcher_id
-    
+
     index [:person_id, :watcher_id], :unique => true
   end
 end
@@ -33,5 +33,14 @@ end
 migration "add beacon minor" do
   DB.alter_table :people do
     add_column :beacon_minor, :int
+  end
+end
+
+migration "create messages table" do
+  DB.create_table :messages do
+    primary_key :id
+    DateTime    :date
+    String      :message
+    Integer     :person_id
   end
 end

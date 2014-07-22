@@ -7,7 +7,6 @@ configure do
   DB = Sequel.connect(ENV['DATABASE_URL'])
   require './config/migrations'
   require './config/data'
-
 end
 
 use Rack::Auth::Basic do |username, password|

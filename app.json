@@ -8,7 +8,7 @@
     "bluetooth",
     "iBeacon"
   ],
-  "website": "https://github.com/panicinc/PunchClockServer",
+  "website": "https://www.panic.com/blog/punchclock-fun-with-ibeacons/",
   "repository": "https://github.com/panicinc/PunchClockServer",
   "env": {
     "AUTH_USER": {

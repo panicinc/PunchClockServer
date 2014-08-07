@@ -12,11 +12,12 @@
   "repository": "https://github.com/panicinc/PunchClockServer",
   "env": {
     "AUTH_USER": {
-      "description": "An HTTP authentication username to secure this instance.",
+      "description": "An HTTP authentication username to secure this instance."
     },
     "AUTH_PASSWORD": {
       "description": "An HTTP authentication password to secure this instance.",
-    },
+      "generator": "secret"
+    }
   },
   "addons": [
     "zeropush",

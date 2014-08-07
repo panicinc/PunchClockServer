@@ -1,0 +1,25 @@
+{
+  "name": "PunchClock Server",
+  "description": "Provides a set of endpoints for the PunchClock iOS app as well as a Status Board-compatible In/Out panel. ",
+  "keywords": [
+    "sinatra",
+    "ruby",
+    "panic",
+    "bluetooth",
+    "iBeacon"
+  ],
+  "website": "https://github.com/panicinc/PunchClockServer",
+  "repository": "https://github.com/panicinc/PunchClockServer",
+  "env": {
+    "AUTH_USER": {
+      "description": "An HTTP authentication username to secure this instance.",
+    },
+    "AUTH_PASSWORD": {
+      "description": "An HTTP authentication password to secure this instance.",
+    },
+  },
+  "addons": [
+    "zeropush",
+    "heroku-postgresql:dev"
+  ]
+}

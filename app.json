@@ -21,6 +21,6 @@
   },
   "addons": [
     "zeropush",
-    "heroku-postgresql:dev"
+    "heroku-postgresql"
   ]
 }

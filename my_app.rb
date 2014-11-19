@@ -53,7 +53,7 @@ end
 
 get '/status/list' do
   DB.transaction do
-    DB.fetch("update people set status = 'Stale' where date < NOW() - INTERVAL '1 DAY' and status != 'Stale';")
+    DB.run("delete from people where now() - date > INTERVAL '2 day';")
   end
 
 #  people = Person.order(:name).where{version >= MINIMUM_VERSION}

@@ -96,7 +96,13 @@ post '/status/update' do
     lowName = params[:name].downcase
     lowName = 'steven' if lowName == 'stevenf'
 
-    person = Person.for_update.first(:name => lowName)
+    if params[:push_id] && !params[:push_id].empty?
+      person = Person.for_update.first(:push_id => params[:push_id])
+    end
+
+    if !person
+      person = Person.for_update.first(:name => lowName)
+    end
 
     if !person
       person = Person.new()

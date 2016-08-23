@@ -1,4 +1,4 @@
-PunchClock Server
+PunchClock Server (Currently Unsupported)
 =======
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)

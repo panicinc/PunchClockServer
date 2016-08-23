@@ -29,5 +29,5 @@ Feel free to fork and send us pull requests
 Bug Reporting
 -------------
 
-**PunchClockServer is an unsupported, unofficial Panic product.** If you can't contribute directly, please file bugs here.
+**PunchClockServer is an unsupported, unofficial Panic product.** Please check out the many forks of this project if you're looking for bug fixes.
 
